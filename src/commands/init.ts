@@ -6,7 +6,14 @@ import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { execSync } from 'node:child_process';
 import { BRAND, bold, dim, colorize } from '../ui/colors.js';
-import { done, fail, note, stepLine, spacer, sectionHeader } from '../ui/splash.js';
+import {
+  done,
+  fail,
+  note,
+  stepLine,
+  spacer,
+  sectionHeader,
+} from '../ui/splash.js';
 import { createSpinner } from '../ui/progress.js';
 
 interface InitOptions {
@@ -53,8 +60,10 @@ function generatePackageJson(name: string, template: string): string {
   if (template === 'full' || template === 'edge-ai') {
     (base.dependencies as Record<string, string>)['react'] = '^19.0.0';
     (base.dependencies as Record<string, string>)['react-dom'] = '^19.0.0';
-    (base.devDependencies as Record<string, string>)['@types/react'] = '^19.0.0';
-    (base.devDependencies as Record<string, string>)['@types/react-dom'] = '^19.0.0';
+    (base.devDependencies as Record<string, string>)['@types/react'] =
+      '^19.0.0';
+    (base.devDependencies as Record<string, string>)['@types/react-dom'] =
+      '^19.0.0';
   }
 
   return JSON.stringify(base, null, 2);
@@ -81,7 +90,7 @@ function generateTsConfig(): string {
       exclude: ['node_modules', 'dist'],
     },
     null,
-    2,
+    2
   );
 }
 
@@ -208,7 +217,7 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
   // Write package.json
   writeFileSync(
     join(projectDir, 'package.json'),
-    generatePackageJson(projectName, template),
+    generatePackageJson(projectName, template)
   );
   done('Created package.json');
 
@@ -229,7 +238,7 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
   // Write .gitignore
   writeFileSync(
     join(projectDir, '.gitignore'),
-    'node_modules/\ndist/\n*.tsbuildinfo\n.env\n.env.local\n.DS_Store\n',
+    'node_modules/\ndist/\n*.tsbuildinfo\n.env\n.env.local\n.DS_Store\n'
   );
   done('Created .gitignore');
 
@@ -251,24 +260,57 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
 
   // Final output
   spacer();
-  console.log(`  ${colorize('╭─────────────────────────────────────────╮', BRAND.aeon)}`);
-  console.log(`  ${colorize('│', BRAND.aeon)} ${bold('Your Aeon Foundation project is ready!')}   ${colorize('│', BRAND.aeon)}`);
-  console.log(`  ${colorize('╰─────────────────────────────────────────╯', BRAND.aeon)}`);
+  console.log(
+    `  ${colorize('╭─────────────────────────────────────────╮', BRAND.aeon)}`
+  );
+  console.log(
+    `  ${colorize('│', BRAND.aeon)} ${bold(
+      'Your Aeon Foundation project is ready!'
+    )}   ${colorize('│', BRAND.aeon)}`
+  );
+  console.log(
+    `  ${colorize('╰─────────────────────────────────────────╯', BRAND.aeon)}`
+  );
   spacer();
 
   console.log(`  ${dim('Next steps:')}`);
   console.log(`  ${dim('$')} ${colorize(`cd ${projectName}`, BRAND.aeon)}`);
-  console.log(`  ${dim('$')} ${colorize(`${pm === 'bun' ? 'bun' : pm} run dev`, BRAND.aeon)}`);
+  console.log(
+    `  ${dim('$')} ${colorize(
+      `${pm === 'bun' ? 'bun' : pm} run dev`,
+      BRAND.aeon
+    )}`
+  );
   spacer();
 
   console.log(`  ${dim('Import the full stack:')}`);
-  console.log(`  ${colorize("import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';", BRAND.electric)}`);
+  console.log(
+    `  ${colorize(
+      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';",
+      BRAND.electric
+    )}`
+  );
   spacer();
 
   console.log(`  ${dim('Or import individual modules:')}`);
-  console.log(`  ${colorize("import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';", BRAND.electric)}`);
-  console.log(`  ${colorize("import { Edgework } from '@affectively/aeon-foundation/edgework';", BRAND.electric)}`);
-  console.log(`  ${colorize("import { NeuralGraph } from '@affectively/aeon-foundation/neural';", BRAND.electric)}`);
+  console.log(
+    `  ${colorize(
+      "import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';",
+      BRAND.electric
+    )}`
+  );
+  console.log(
+    `  ${colorize(
+      "import { Edgework } from '@affectively/aeon-foundation/edgework';",
+      BRAND.electric
+    )}`
+  );
+  console.log(
+    `  ${colorize(
+      "import { NeuralGraph } from '@affectively/aeon-foundation/neural';",
+      BRAND.electric
+    )}`
+  );
   spacer();
 
   note('Docs: https://github.com/affectively-ai/aeon-foundation');

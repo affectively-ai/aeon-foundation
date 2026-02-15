@@ -56,12 +56,33 @@ export const STACK = {
   name: 'Aeon Foundation',
   version: '0.2.0',
   packages: {
-    aeon: { name: '@affectively/aeon', description: 'Distributed sync & schema versioning' },
-    pages: { name: '@affectively/aeon-pages', description: 'Collaborative pages with CRDT flux state' },
-    dash: { name: '@affectively/dash', description: 'CRDT-based state management with WebRTC' },
-    relay: { name: '@affectively/relay', description: 'Transport relay layer with discovery & privacy' },
-    edgework: { name: '@affectively/edgework-sdk', description: 'Client-side AI inference & on-device RLHF' },
-    aegis: { name: '@affectively/auth', description: 'UCAN-based decentralized authentication' },
-    neural: { name: '@affectively/neural', description: 'WebGPU-accelerated neural graph database' },
+    aeon: {
+      name: '@affectively/aeon',
+      description: 'Distributed sync & schema versioning',
+    },
+    pages: {
+      name: '@affectively/aeon-pages',
+      description: 'Collaborative pages with CRDT flux state',
+    },
+    dash: {
+      name: '@affectively/dash',
+      description: 'CRDT-based state management with WebRTC',
+    },
+    relay: {
+      name: '@affectively/relay',
+      description: 'Transport relay layer with discovery & privacy',
+    },
+    edgework: {
+      name: '@affectively/edgework-sdk',
+      description: 'Client-side AI inference & on-device RLHF',
+    },
+    aegis: {
+      name: '@affectively/auth',
+      description: 'UCAN-based decentralized authentication',
+    },
+    neural: {
+      name: '@affectively/neural',
+      description: 'WebGPU-accelerated neural graph database',
+    },
   },
 } as const;

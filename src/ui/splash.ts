@@ -75,7 +75,9 @@ export async function showSplash(options?: {
   console.log('');
 
   if (minimal) {
-    const line = `${BRAND.aeon}>${ANSI.reset} ${bold('aeon-foundation')} ${dim(`v${VERSION}`)}`;
+    const line = `${BRAND.aeon}>${ANSI.reset} ${bold('aeon-foundation')} ${dim(
+      `v${VERSION}`
+    )}`;
     process.stdout.write(`  ${line}`);
     console.log('');
     return;
@@ -99,14 +101,18 @@ export async function showSplash(options?: {
       const color = interpolateColor(
         BRAND_RGB.aeon,
         BRAND_RGB.gold,
-        Math.random() * 0.3,
+        Math.random() * 0.3
       );
       process.stdout.write(color + char + ANSI.reset);
       await sleep(8);
     }
     console.log('');
   } else {
-    console.log(dim(center('Aeon · Pages · Dash · Relay · Edgework · Aegis · Neural', width)));
+    console.log(
+      dim(
+        center('Aeon · Pages · Dash · Relay · Edgework · Aegis · Neural', width)
+      )
+    );
   }
 
   console.log(dim(center(`v${VERSION}`, width)));
@@ -200,10 +206,18 @@ export function showStackDiagram(): void {
     const name = layer.name.padEnd(maxName);
     const pkg = dim(layer.pkg.padEnd(maxPkg));
     console.log(
-      `  ${colorize('  │', layer.color)} ${colorize(layer.icon, layer.color)} ${bold(name)}  ${pkg}  ${colorize('│', layer.color)}`,
+      `  ${colorize('  │', layer.color)} ${colorize(
+        layer.icon,
+        layer.color
+      )} ${bold(name)}  ${pkg}  ${colorize('│', layer.color)}`
     );
     console.log(
-      `  ${colorize('  │', layer.color)}   ${dim(layer.description)}${' '.repeat(Math.max(0, 53 - layer.description.length - 1))}${colorize('│', layer.color)}`,
+      `  ${colorize('  │', layer.color)}   ${dim(
+        layer.description
+      )}${' '.repeat(Math.max(0, 53 - layer.description.length - 1))}${colorize(
+        '│',
+        layer.color
+      )}`
     );
 
     // Separator or bottom border
@@ -212,7 +226,10 @@ export function showStackDiagram(): void {
     } else {
       const nextColor = STACK_LAYERS[i + 1].color;
       console.log(
-        `  ${colorize('  ├', layer.color)}${colorize('─'.repeat(56), nextColor)}${colorize('┤', nextColor)}`,
+        `  ${colorize('  ├', layer.color)}${colorize(
+          '─'.repeat(56),
+          nextColor
+        )}${colorize('┤', nextColor)}`
       );
     }
   }
@@ -235,7 +252,7 @@ export function groupHeader(title: string): void {
 
 export function commandExample(command: string, description: string): void {
   console.log(
-    `  ${dim('$')} ${colorize(command, BRAND.aeon)}  ${dim(description)}`,
+    `  ${dim('$')} ${colorize(command, BRAND.aeon)}  ${dim(description)}`
   );
 }
 
@@ -264,14 +281,18 @@ export function note(message: string): void {
   console.log(`  ${dim(message)}`);
 }
 
-export function keyValue(key: string, value: string, keyWidth: number = 16): void {
+export function keyValue(
+  key: string,
+  value: string,
+  keyWidth: number = 16
+): void {
   const paddedKey = key.padEnd(keyWidth);
   console.log(`  ${colorize(paddedKey, BRAND.steel)} ${value}`);
 }
 
 export function stepLine(
   text: string,
-  status: 'pending' | 'active' | 'done' | 'error' = 'pending',
+  status: 'pending' | 'active' | 'done' | 'error' = 'pending'
 ): void {
   const icons = {
     pending: dim('○'),

@@ -11,7 +11,14 @@
  */
 
 import { BRAND, ANSI, bold, dim, colorize } from './ui/colors.js';
-import { showSplash, showStackDiagram, spacer, groupHeader, commandExample, note } from './ui/splash.js';
+import {
+  showSplash,
+  showStackDiagram,
+  spacer,
+  groupHeader,
+  commandExample,
+  note,
+} from './ui/splash.js';
 import { initProject } from './commands/init.js';
 import { showInfo } from './commands/info.js';
 
@@ -64,12 +71,17 @@ function parseArgs(argv: string[]): ParsedArgs {
 function showHelp(): void {
   console.log('');
   console.log(
-    `  ${BRAND.aeon}>${ANSI.reset} ${bold('aeon-foundation')} ${dim(`v${VERSION}`)}  ${dim('The complete Aeon stack')}`,
+    `  ${BRAND.aeon}>${ANSI.reset} ${bold('aeon-foundation')} ${dim(
+      `v${VERSION}`
+    )}  ${dim('The complete Aeon stack')}`
   );
 
   groupHeader('Quick Start');
   commandExample('npx @affectively/aeon-foundation', 'Interactive setup');
-  commandExample('npx @affectively/aeon-foundation init my-app', 'Scaffold a project');
+  commandExample(
+    'npx @affectively/aeon-foundation init my-app',
+    'Scaffold a project'
+  );
 
   groupHeader('Commands');
   commandExample('init [name]', 'Create a new Aeon Foundation project');
@@ -84,15 +96,36 @@ function showHelp(): void {
   commandExample('--pm npm|bun|pnpm|yarn', 'Package manager to use');
 
   groupHeader('Imports');
-  console.log(`  ${colorize("import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation'", BRAND.electric)}`);
+  console.log(
+    `  ${colorize(
+      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation'",
+      BRAND.electric
+    )}`
+  );
   spacer();
   console.log(`  ${dim('Or individual modules:')}`);
-  console.log(`  ${colorize("import { SyncCoordinator } from '@affectively/aeon-foundation/aeon'", BRAND.electric)}`);
-  console.log(`  ${colorize("import { Edgework } from '@affectively/aeon-foundation/edgework'", BRAND.electric)}`);
+  console.log(
+    `  ${colorize(
+      "import { SyncCoordinator } from '@affectively/aeon-foundation/aeon'",
+      BRAND.electric
+    )}`
+  );
+  console.log(
+    `  ${colorize(
+      "import { Edgework } from '@affectively/aeon-foundation/edgework'",
+      BRAND.electric
+    )}`
+  );
 
   groupHeader('Links');
-  console.log(`  ${dim('GitHub')}   https://github.com/affectively-ai/aeon-foundation`);
-  console.log(`  ${dim('npm')}      https://npmjs.com/package/@affectively/aeon-foundation`);
+  console.log(
+    `  ${dim('GitHub')}   https://github.com/affectively-ai/aeon-foundation`
+  );
+  console.log(
+    `  ${dim(
+      'npm'
+    )}      https://npmjs.com/package/@affectively/aeon-foundation`
+  );
   console.log(`  ${dim('Website')}  https://affectively.ai`);
 
   spacer();
@@ -108,17 +141,35 @@ async function defaultAction(): Promise<void> {
 
   console.log(`  ${bold('Get started:')}`);
   spacer();
-  commandExample('npx @affectively/aeon-foundation init my-app', 'Scaffold a new project');
+  commandExample(
+    'npx @affectively/aeon-foundation init my-app',
+    'Scaffold a new project'
+  );
   commandExample('npx @affectively/aeon-foundation info', 'Explore the stack');
   spacer();
 
   console.log(`  ${dim('Or just install it:')}`);
-  console.log(`  ${dim('$')} ${colorize('npm install @affectively/aeon-foundation', BRAND.aeon)}`);
-  console.log(`  ${dim('$')} ${colorize('bun add @affectively/aeon-foundation', BRAND.aeon)}`);
+  console.log(
+    `  ${dim('$')} ${colorize(
+      'npm install @affectively/aeon-foundation',
+      BRAND.aeon
+    )}`
+  );
+  console.log(
+    `  ${dim('$')} ${colorize(
+      'bun add @affectively/aeon-foundation',
+      BRAND.aeon
+    )}`
+  );
   spacer();
 
   console.log(`  ${dim('Then import everything:')}`);
-  console.log(`  ${colorize("import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';", BRAND.electric)}`);
+  console.log(
+    `  ${colorize(
+      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';",
+      BRAND.electric
+    )}`
+  );
   spacer();
 
   note('https://github.com/affectively-ai/aeon-foundation');
@@ -152,9 +203,15 @@ async function main(): Promise<void> {
       await showSplash({ animate: false, minimal: true });
       await initProject({
         name: positionals[0] || (flags['name'] as string),
-        template: (flags['template'] as 'minimal' | 'full' | 'edge-ai') || 'minimal',
+        template:
+          (flags['template'] as 'minimal' | 'full' | 'edge-ai') || 'minimal',
         skipInstall: !!flags['skip-install'],
-        packageManager: flags['pm'] as 'npm' | 'bun' | 'pnpm' | 'yarn' | undefined,
+        packageManager: flags['pm'] as
+          | 'npm'
+          | 'bun'
+          | 'pnpm'
+          | 'yarn'
+          | undefined,
       });
       break;
     }

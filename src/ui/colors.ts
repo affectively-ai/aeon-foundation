@@ -68,7 +68,7 @@ export const BRAND_RGB = {
 export function interpolateColor(
   c1: { r: number; g: number; b: number },
   c2: { r: number; g: number; b: number },
-  t: number,
+  t: number
 ): string {
   const r = Math.round(c1.r + (c2.r - c1.r) * t);
   const g = Math.round(c1.g + (c2.g - c1.g) * t);

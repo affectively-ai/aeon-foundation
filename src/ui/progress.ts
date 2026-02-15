@@ -2,7 +2,15 @@
  * Aeon Foundation CLI - Progress Indicators
  */
 
-import { ANSI, BRAND, BRAND_RGB, interpolateColor, bold, dim, colorize } from './colors.js';
+import {
+  ANSI,
+  BRAND,
+  BRAND_RGB,
+  interpolateColor,
+  bold,
+  dim,
+  colorize,
+} from './colors.js';
 
 const SPINNER_FRAMES = ['◜', '◠', '◝', '◞', '◡', '◟'];
 
