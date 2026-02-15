@@ -16,7 +16,7 @@ import {
   dim,
 } from './colors.js';
 
-const VERSION = '0.1.0';
+const VERSION = '0.2.0';
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -93,7 +93,7 @@ export async function showSplash(options?: {
   console.log('');
 
   if (animate) {
-    const tagline = 'Distributed sync · Collaborative pages · Edge AI · CRDT state';
+    const tagline = 'Aeon · Pages · Dash · Relay · Edgework · Aegis · Neural';
     process.stdout.write('  ');
     for (const char of tagline) {
       const color = interpolateColor(
@@ -106,7 +106,7 @@ export async function showSplash(options?: {
     }
     console.log('');
   } else {
-    console.log(dim(center('Distributed sync · Collaborative pages · Edge AI · CRDT state', width)));
+    console.log(dim(center('Aeon · Pages · Dash · Relay · Edgework · Aegis · Neural', width)));
   }
 
   console.log(dim(center(`v${VERSION}`, width)));
@@ -127,6 +127,13 @@ interface StackLayer {
 }
 
 const STACK_LAYERS: StackLayer[] = [
+  {
+    name: 'Neural',
+    pkg: '@affectively/neural',
+    description: 'WebGPU-accelerated neural graph database',
+    color: BRAND.electric,
+    icon: '◈',
+  },
   {
     name: 'Edgework SDK',
     pkg: '@affectively/edgework-sdk',
@@ -149,6 +156,13 @@ const STACK_LAYERS: StackLayer[] = [
     icon: '*',
   },
   {
+    name: 'Relay',
+    pkg: '@affectively/relay',
+    description: 'Transport relay with discovery, privacy & adaptive sync',
+    color: BRAND.emerald,
+    icon: '⇄',
+  },
+  {
     name: 'Aeon',
     pkg: '@affectively/aeon',
     description: 'Distributed sync, schema versioning, conflict resolution',
@@ -156,9 +170,9 @@ const STACK_LAYERS: StackLayer[] = [
     icon: '@',
   },
   {
-    name: 'Auth',
+    name: 'Aegis',
     pkg: '@affectively/auth',
-    description: 'UCAN-based decentralized authentication',
+    description: 'UCAN-based decentralized authentication & zero-trust',
     color: BRAND.goldDim,
     icon: '#',
   },

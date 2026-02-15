@@ -28,7 +28,7 @@ cd my-app
 bun dev
 ```
 
-That's it. Distributed sync, collaborative state, edge AI, decentralized auth — configured and ready.
+That's it. Distributed sync, collaborative state, relay transport, edge AI, neural graph, decentralized auth — configured and ready.
 
 ## What if you owned your stack?
 
@@ -47,19 +47,25 @@ Aeon Foundation is the way out.
 
 ```
   ╭────────────────────────────────────────────────────────╮
-  │ >  Edgework SDK          @affectively/edgework-sdk     │
+  │ ◈  Neural                  @affectively/neural         │
+  │    WebGPU-accelerated neural graph database             │
+  ├────────────────────────────────────────────────────────┤
+  │ >  Edgework SDK            @affectively/edgework-sdk   │
   │    Client-side AI · WebGPU inference · On-device RLHF  │
   ├────────────────────────────────────────────────────────┤
-  │ ~  Aeon Pages             @affectively/aeon-pages       │
+  │ ~  Aeon Pages              @affectively/aeon-pages      │
   │    Collaborative pages · CRDT flux state · Zero-CLS    │
   ├────────────────────────────────────────────────────────┤
-  │ *  Dash                   @affectively/dash             │
+  │ *  Dash                    @affectively/dash            │
   │    Distributed CRDT state · WebRTC sync · Signals      │
   ├────────────────────────────────────────────────────────┤
-  │ @  Aeon                   @affectively/aeon             │
+  │ ⇄  Relay                   @affectively/relay          │
+  │    Transport relay · Discovery · Privacy · Adaptive    │
+  ├────────────────────────────────────────────────────────┤
+  │ @  Aeon                    @affectively/aeon            │
   │    Distributed sync · Schema versioning · Conflict res │
   ├────────────────────────────────────────────────────────┤
-  │ #  Auth                   @affectively/auth             │
+  │ #  Aegis                   @affectively/auth            │
   │    UCAN-based · Decentralized · Zero-trust             │
   ╰────────────────────────────────────────────────────────╯
 ```
@@ -69,10 +75,10 @@ Aeon Foundation is the way out.
 ### Import everything
 
 ```typescript
-import { Aeon, Pages, Dash, Edgework, Auth } from '@affectively/aeon-foundation';
+import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';
 ```
 
-Five namespaces. The entire distributed stack.
+Seven namespaces. The entire distributed stack.
 
 ```typescript
 // Distributed sync — coordinate nodes across the network
@@ -104,7 +110,8 @@ import { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon-foundat
 import { Edgework } from '@affectively/aeon-foundation/edgework';
 import { AeonPageProvider } from '@affectively/aeon-foundation/pages';
 import { createStore } from '@affectively/aeon-foundation/dash';
-import { createUcanAuth } from '@affectively/aeon-foundation/auth';
+import { createUcanAuth } from '@affectively/aeon-foundation/aegis';
+import { NeuralGraph } from '@affectively/aeon-foundation/neural';
 ```
 
 ## Modules
@@ -139,6 +146,16 @@ import { createStore } from '@affectively/aeon-foundation/dash';
 
 Submodules: `sync` `provider` `connection` `webtransport`
 
+### Relay — The Transport Layer
+
+Relay discovery, adaptive transport selection, and privacy-preserving sync. WebSocket and WebTransport with automatic failover.
+
+```typescript
+import { Relay } from '@affectively/aeon-foundation/relay';
+```
+
+Submodules: `discovery` `transport` `privacy`
+
 ### Edgework SDK — Intelligence at the Edge
 
 Client-side AI inference with WebGPU. On-device RLHF. Model sync. Zero server dependency. The model runs where the user is.
@@ -167,13 +184,23 @@ await ai.feedback(messageHash, 'positive');
 
 Submodules: `storage` `inference` `sync` `rlhf` `react` `data` `compute` `compute/distributed` `auth` `gateway` `agent`
 
-### Auth — No Authority
+### Aegis — No Authority
 
 UCAN-based decentralized authentication. No central server decides who you are.
 
 ```typescript
-import { createUcanAuth } from '@affectively/aeon-foundation/auth';
+import { createUcanAuth } from '@affectively/aeon-foundation/aegis';
 ```
+
+### Neural — The Graph
+
+A transparent, local-first, WebGPU-accelerated neural graph database. Knowledge graphs that think at the speed of the GPU.
+
+```typescript
+import { NeuralGraph } from '@affectively/aeon-foundation/neural';
+```
+
+Submodules: `engine` `gpu`
 
 ## CLI
 
@@ -195,11 +222,11 @@ npx @affectively/aeon-foundation --help
 
 ### Templates
 
-| Template   | What you get                                      |
-| ---------- | ------------------------------------------------- |
-| `minimal`  | SyncCoordinator + TypeScript. Start from zero.    |
-| `full`     | All five packages + React. Everything configured. |
-| `edge-ai`  | Edgework SDK focused. AI at the edge.             |
+| Template   | What you get                                        |
+| ---------- | --------------------------------------------------- |
+| `minimal`  | SyncCoordinator + TypeScript. Start from zero.      |
+| `full`     | All seven packages + React. Everything configured.  |
+| `edge-ai`  | Edgework SDK focused. AI at the edge.               |
 
 ```bash
 npx @affectively/aeon-foundation init my-app --template full
@@ -264,7 +291,9 @@ In your application, Aeon Foundation is that bridge: the complete set of primiti
 - [Aeon](https://github.com/affectively-ai/aeon) — Distributed sync
 - [Aeon Pages](https://github.com/affectively-ai/aeon-flux) — Collaborative pages
 - [Dash](https://github.com/affectively-ai/dash) — CRDT state
+- [Relay](https://github.com/affectively-ai/relay) — Transport relay
 - [Edgework SDK](https://github.com/affectively-ai/edgework-sdk) — Edge AI
+- [Neural](https://github.com/affectively-ai/neural) — Neural graph database
 - [Affectively](https://affectively.ai)
 
 ## License

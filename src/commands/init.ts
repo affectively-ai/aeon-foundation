@@ -109,15 +109,17 @@ function generateFullEntry(): string {
   return `/**
  * My Aeon Foundation App
  *
- * Full-stack: sync, pages, dash, edge AI, auth.
+ * Full-stack: sync, pages, dash, relay, edge AI, aegis, neural.
  */
 
 import {
   Aeon,
   Pages,
   Dash,
+  Relay,
   Edgework,
-  Auth,
+  Aegis,
+  Neural,
   STACK,
 } from '@affectively/aeon-foundation';
 
@@ -260,12 +262,13 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
   spacer();
 
   console.log(`  ${dim('Import the full stack:')}`);
-  console.log(`  ${colorize("import { Aeon, Pages, Dash, Edgework, Auth } from '@affectively/aeon-foundation';", BRAND.electric)}`);
+  console.log(`  ${colorize("import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';", BRAND.electric)}`);
   spacer();
 
   console.log(`  ${dim('Or import individual modules:')}`);
   console.log(`  ${colorize("import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';", BRAND.electric)}`);
   console.log(`  ${colorize("import { Edgework } from '@affectively/aeon-foundation/edgework';", BRAND.electric)}`);
+  console.log(`  ${colorize("import { NeuralGraph } from '@affectively/aeon-foundation/neural';", BRAND.electric)}`);
   spacer();
 
   note('Docs: https://github.com/affectively-ai/aeon-foundation');

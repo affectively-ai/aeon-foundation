@@ -15,7 +15,7 @@ import { showSplash, showStackDiagram, spacer, groupHeader, commandExample, note
 import { initProject } from './commands/init.js';
 import { showInfo } from './commands/info.js';
 
-const VERSION = '0.1.0';
+const VERSION = '0.2.0';
 
 // ────────────────────────────────────────────────────────────────
 // Argument Parsing (zero dependencies)
@@ -84,7 +84,7 @@ function showHelp(): void {
   commandExample('--pm npm|bun|pnpm|yarn', 'Package manager to use');
 
   groupHeader('Imports');
-  console.log(`  ${colorize("import { Aeon, Pages, Dash, Edgework, Auth } from '@affectively/aeon-foundation'", BRAND.electric)}`);
+  console.log(`  ${colorize("import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation'", BRAND.electric)}`);
   spacer();
   console.log(`  ${dim('Or individual modules:')}`);
   console.log(`  ${colorize("import { SyncCoordinator } from '@affectively/aeon-foundation/aeon'", BRAND.electric)}`);
@@ -118,7 +118,7 @@ async function defaultAction(): Promise<void> {
   spacer();
 
   console.log(`  ${dim('Then import everything:')}`);
-  console.log(`  ${colorize("import { Aeon, Pages, Dash, Edgework, Auth } from '@affectively/aeon-foundation';", BRAND.electric)}`);
+  console.log(`  ${colorize("import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';", BRAND.electric)}`);
   spacer();
 
   note('https://github.com/affectively-ai/aeon-foundation');

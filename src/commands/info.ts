@@ -18,12 +18,14 @@ export function showInfo(): void {
   spacer();
 
   const imports = [
-    { path: '@affectively/aeon-foundation', desc: 'Everything (Aeon, Pages, Dash, Edgework, Auth)' },
+    { path: '@affectively/aeon-foundation', desc: 'Everything (Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural)' },
     { path: '@affectively/aeon-foundation/aeon', desc: 'Distributed sync & versioning' },
     { path: '@affectively/aeon-foundation/pages', desc: 'Collaborative pages + CRDT flux' },
     { path: '@affectively/aeon-foundation/dash', desc: 'CRDT state + WebRTC sync' },
+    { path: '@affectively/aeon-foundation/relay', desc: 'Transport relay with discovery' },
     { path: '@affectively/aeon-foundation/edgework', desc: 'Edge AI + WebGPU inference' },
-    { path: '@affectively/aeon-foundation/auth', desc: 'UCAN authentication' },
+    { path: '@affectively/aeon-foundation/aegis', desc: 'UCAN-based decentralized auth' },
+    { path: '@affectively/aeon-foundation/neural', desc: 'WebGPU neural graph database' },
   ];
 
   for (const imp of imports) {

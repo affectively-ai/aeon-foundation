@@ -1,7 +1,7 @@
 {
   "name": "@affectively/aeon-foundation",
-  "version": "0.1.0",
-  "description": "The complete Aeon stack - distributed sync, collaborative pages, state management, edge AI, and authentication in one package",
+  "version": "0.2.0",
+  "description": "The complete Aeon stack - distributed sync, collaborative pages, state management, relay transport, edge AI, neural graph database, and decentralized authentication in one package",
   "keywords": [
     "aeon",
     "affectively",
@@ -14,6 +14,11 @@
     "webgpu",
     "pages",
     "dash",
+    "relay",
+    "neural",
+    "aegis",
+    "graph-database",
+    "authentication",
     "real-time",
     "offline-first",
     "foundation"
@@ -33,8 +38,8 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "aeon-foundation": "./dist/cli.js",
-    "aeon-stack": "./dist/cli.js"
+    "aeon-foundation": "dist/cli.js",
+    "aeon-stack": "dist/cli.js"
   },
   "exports": {
     ".": {
@@ -87,6 +92,16 @@
         "default": "./dist/edgework.cjs"
       }
     },
+    "./relay": {
+      "import": {
+        "types": "./dist/relay.d.ts",
+        "default": "./dist/relay.js"
+      },
+      "require": {
+        "types": "./dist/relay.d.cts",
+        "default": "./dist/relay.cjs"
+      }
+    },
     "./auth": {
       "import": {
         "types": "./dist/auth.d.ts",
@@ -95,6 +110,26 @@
       "require": {
         "types": "./dist/auth.d.cts",
         "default": "./dist/auth.cjs"
+      }
+    },
+    "./aegis": {
+      "import": {
+        "types": "./dist/aegis.d.ts",
+        "default": "./dist/aegis.js"
+      },
+      "require": {
+        "types": "./dist/aegis.d.cts",
+        "default": "./dist/aegis.cjs"
+      }
+    },
+    "./neural": {
+      "import": {
+        "types": "./dist/neural.d.ts",
+        "default": "./dist/neural.js"
+      },
+      "require": {
+        "types": "./dist/neural.d.cts",
+        "default": "./dist/neural.cjs"
       }
     }
   },
@@ -113,8 +148,10 @@
     "@affectively/aeon": "^1.2.0",
     "@affectively/aeon-pages": "^1.4.0",
     "@affectively/dash": "^5.3.1",
+    "@affectively/relay": "^6.0.0",
     "@affectively/edgework-sdk": "^0.1.2",
-    "@affectively/auth": "^0.1.0"
+    "@affectively/auth": "^0.1.0",
+    "@affectively/neural": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
