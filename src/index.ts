@@ -1,0 +1,59 @@
+/**
+ * @affectively/aeon-foundation
+ *
+ * The complete Aeon stack in one import.
+ *
+ * Distributed sync, collaborative pages, state management,
+ * edge AI inference, and UCAN authentication.
+ *
+ * @example
+ * ```typescript
+ * // Import the entire stack
+ * import { Aeon, Pages, Dash, Edgework, Auth } from '@affectively/aeon-foundation';
+ *
+ * // Use distributed sync
+ * const coordinator = new Aeon.SyncCoordinator();
+ *
+ * // Use edge AI inference
+ * const ai = await Edgework.init({ model: 'cyrano-360m' });
+ *
+ * // Use CRDT-based state
+ * const state = Dash.createStore();
+ * ```
+ *
+ * @example
+ * ```typescript
+ * // Or import individual modules
+ * import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';
+ * import { Edgework } from '@affectively/aeon-foundation/edgework';
+ * import { createStore } from '@affectively/aeon-foundation/dash';
+ * ```
+ *
+ * @packageDocumentation
+ */
+
+// Re-export all stack packages as namespaces
+export * as Aeon from '@affectively/aeon';
+export * as Pages from '@affectively/aeon-pages';
+export * as Dash from '@affectively/dash';
+export * as Edgework from '@affectively/edgework-sdk';
+export * as Auth from '@affectively/auth';
+
+// Also export the most common types/classes at the top level for convenience
+export { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon';
+export { Edgework as EdgeworkSDK } from '@affectively/edgework-sdk';
+
+/**
+ * Stack version manifest
+ */
+export const STACK = {
+  name: 'Aeon Foundation',
+  version: '0.1.0',
+  packages: {
+    aeon: { name: '@affectively/aeon', description: 'Distributed sync & schema versioning' },
+    pages: { name: '@affectively/aeon-pages', description: 'Collaborative pages with CRDT flux state' },
+    dash: { name: '@affectively/dash', description: 'CRDT-based state management with WebRTC' },
+    edgework: { name: '@affectively/edgework-sdk', description: 'Client-side AI inference & on-device RLHF' },
+    auth: { name: '@affectively/auth', description: 'UCAN-based decentralized authentication' },
+  },
+} as const;

@@ -1,0 +1,142 @@
+{
+  "name": "@affectively/aeon-foundation",
+  "version": "0.1.0",
+  "description": "The complete Aeon stack - distributed sync, collaborative pages, state management, edge AI, and authentication in one package",
+  "keywords": [
+    "aeon",
+    "affectively",
+    "distributed",
+    "sync",
+    "crdt",
+    "collaborative",
+    "edge-ai",
+    "inference",
+    "webgpu",
+    "pages",
+    "dash",
+    "real-time",
+    "offline-first",
+    "foundation"
+  ],
+  "author": "AFFECTIVELY <support@affectively.ai>",
+  "license": "MIT",
+  "homepage": "https://github.com/affectively-ai/aeon-foundation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/affectively-ai/aeon-foundation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/affectively-ai/aeon-foundation/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "aeon-foundation": "./dist/cli.js",
+    "aeon-stack": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./aeon": {
+      "import": {
+        "types": "./dist/aeon.d.ts",
+        "default": "./dist/aeon.js"
+      },
+      "require": {
+        "types": "./dist/aeon.d.cts",
+        "default": "./dist/aeon.cjs"
+      }
+    },
+    "./pages": {
+      "import": {
+        "types": "./dist/pages.d.ts",
+        "default": "./dist/pages.js"
+      },
+      "require": {
+        "types": "./dist/pages.d.cts",
+        "default": "./dist/pages.cjs"
+      }
+    },
+    "./dash": {
+      "import": {
+        "types": "./dist/dash.d.ts",
+        "default": "./dist/dash.js"
+      },
+      "require": {
+        "types": "./dist/dash.d.cts",
+        "default": "./dist/dash.cjs"
+      }
+    },
+    "./edgework": {
+      "import": {
+        "types": "./dist/edgework.d.ts",
+        "default": "./dist/edgework.js"
+      },
+      "require": {
+        "types": "./dist/edgework.d.cts",
+        "default": "./dist/edgework.cjs"
+      }
+    },
+    "./auth": {
+      "import": {
+        "types": "./dist/auth.d.ts",
+        "default": "./dist/auth.js"
+      },
+      "require": {
+        "types": "./dist/auth.d.cts",
+        "default": "./dist/auth.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "bun run src/cli.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@affectively/aeon": "^1.2.0",
+    "@affectively/aeon-pages": "^1.4.0",
+    "@affectively/dash": "^5.3.1",
+    "@affectively/edgework-sdk": "^0.1.2",
+    "@affectively/auth": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "@affectively/zk-encryption": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "@affectively/zk-encryption": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
