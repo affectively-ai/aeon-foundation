@@ -9,4 +9,4 @@
  * import { AeonPageProvider, useAeonPage } from '@affectively/aeon-foundation/pages';
  * ```
  */
-export * from '@affectively/aeon-pages';
+export * from '@affectively/aeon-flux';

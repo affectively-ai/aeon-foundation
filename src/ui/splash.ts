@@ -148,8 +148,8 @@ const STACK_LAYERS: StackLayer[] = [
     icon: '>',
   },
   {
-    name: 'Aeon Pages',
-    pkg: '@affectively/aeon-pages',
+    name: 'Aeon Flux',
+    pkg: '@affectively/aeon-flux',
     description: 'Collaborative pages with CRDT flux state, ESI, zero-CLS',
     color: BRAND.aeonBright,
     icon: '~',

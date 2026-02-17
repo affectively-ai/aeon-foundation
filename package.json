@@ -146,7 +146,7 @@
   },
   "dependencies": {
     "@affectively/aeon": "^1.2.0",
-    "@affectively/aeon-pages": "^1.4.0",
+    "@affectively/aeon-flux": "^1.4.0",
     "@affectively/dash": "^5.3.1",
     "@affectively/relay": "^6.0.0",
     "@affectively/edgework-sdk": "^0.1.2",

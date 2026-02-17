@@ -35,7 +35,7 @@
 
 // Re-export all stack packages as namespaces
 export * as Aeon from '@affectively/aeon';
-export * as Pages from '@affectively/aeon-pages';
+export * as Pages from '@affectively/aeon-flux';
 export * as Dash from '@affectively/dash';
 export * as Relay from '@affectively/relay';
 export * as Edgework from '@affectively/edgework-sdk';
@@ -61,7 +61,7 @@ export const STACK = {
       description: 'Distributed sync & schema versioning',
     },
     pages: {
-      name: '@affectively/aeon-pages',
+      name: '@affectively/aeon-flux',
       description: 'Collaborative pages with CRDT flux state',
     },
     dash: {

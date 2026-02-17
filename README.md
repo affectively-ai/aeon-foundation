@@ -53,7 +53,7 @@ Aeon Foundation is the way out.
   │ >  Edgework SDK            @affectively/edgework-sdk   │
   │    Client-side AI · WebGPU inference · On-device RLHF  │
   ├────────────────────────────────────────────────────────┤
-  │ ~  Aeon Pages              @affectively/aeon-pages      │
+  │ ~  Aeon Flux              @affectively/aeon-flux      │
   │    Collaborative pages · CRDT flux state · Zero-CLS    │
   ├────────────────────────────────────────────────────────┤
   │ *  Dash                    @affectively/dash            │
@@ -126,7 +126,7 @@ import { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon-foundat
 
 Submodules: `core` `offline` `compression` `optimization` `presence` `versioning` `distributed` `utils` `crypto` `persistence`
 
-### Aeon Pages — Pages that Think
+### Aeon Flux — Pages that Think
 
 CRDT-based flux state, Edge Side Inference, zero-CLS rendering. Collaborative pages with built-in intelligence.
 
@@ -289,7 +289,7 @@ In your application, Aeon Foundation is that bridge: the complete set of primiti
 - [GitHub](https://github.com/affectively-ai/aeon-foundation)
 - [npm](https://www.npmjs.com/package/@affectively/aeon-foundation)
 - [Aeon](https://github.com/affectively-ai/aeon) — Distributed sync
-- [Aeon Pages](https://github.com/affectively-ai/aeon-flux) — Collaborative pages
+- [Aeon Flux](https://github.com/affectively-ai/aeon-flux) — Collaborative pages
 - [Dash](https://github.com/affectively-ai/dash) — CRDT state
 - [Relay](https://github.com/affectively-ai/relay) — Transport relay
 - [Edgework SDK](https://github.com/affectively-ai/edgework-sdk) — Edge AI
