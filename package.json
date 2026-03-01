@@ -1,6 +1,6 @@
 {
   "name": "@affectively/aeon-foundation",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "The complete Aeon stack - distributed sync, collaborative pages, state management, relay transport, edge AI, neural graph database, and decentralized authentication in one package",
   "keywords": [
     "aeon",
@@ -23,8 +23,8 @@
     "offline-first",
     "foundation"
   ],
-  "author": "AFFECTIVELY <support@affectively.ai>",
-  "license": "MIT",
+  "author": "Edgework DAO",
+  "license": "UNLICENSED",
   "homepage": "https://github.com/affectively-ai/aeon-foundation#readme",
   "repository": {
     "type": "git",
