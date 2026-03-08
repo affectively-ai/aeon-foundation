@@ -87,7 +87,7 @@ export async function showSplash(options?: {
   const lines = logo.trim().split('\n');
 
   for (let i = 0; i < lines.length; i++) {
-    const t = i / (lines.length - 1);
+    const t = lines.length > 1 ? i / (lines.length - 1) : 0;
     const color = interpolateColor(BRAND_RGB.aeon, BRAND_RGB.electric, t);
     console.log(color + center(lines[i], width) + ANSI.reset);
   }
