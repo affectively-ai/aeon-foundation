@@ -16,7 +16,11 @@ import {
   dim,
 } from './colors.js';
 
-const VERSION = '0.2.0';
+/**
+ * Single source of truth for the displayed CLI version.
+ * Keep in sync with package.json "version" field.
+ */
+export const VERSION = '0.2.3';
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
