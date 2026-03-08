@@ -26,6 +26,7 @@ export class Spinner {
 
   start(text?: string): this {
     if (text) this.text = text;
+    if (this.intervalId) clearInterval(this.intervalId);
     process.stdout.write(ANSI.hideCursor);
 
     this.intervalId = setInterval(() => {
@@ -95,7 +96,7 @@ export class ProgressBar {
   }
 
   private render(message?: string): void {
-    const percent = this.current / this.total;
+    const percent = this.total > 0 ? this.current / this.total : 0;
     const filled = Math.round(this.width * percent);
     const empty = this.width - filled;
 

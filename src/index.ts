@@ -54,7 +54,7 @@ export { Edgework as EdgeworkSDK } from '@affectively/edgework-sdk';
  */
 export const STACK = {
   name: 'Aeon Foundation',
-  version: '0.2.0',
+  version: '0.2.3',
   packages: {
     aeon: {
       name: '@affectively/aeon',

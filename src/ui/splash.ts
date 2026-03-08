@@ -16,7 +16,11 @@ import {
   dim,
 } from './colors.js';
 
-const VERSION = '0.2.0';
+/**
+ * Single source of truth for the displayed CLI version.
+ * Keep in sync with package.json "version" field.
+ */
+export const VERSION = '0.2.3';
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -87,7 +91,7 @@ export async function showSplash(options?: {
   const lines = logo.trim().split('\n');
 
   for (let i = 0; i < lines.length; i++) {
-    const t = i / (lines.length - 1);
+    const t = lines.length > 1 ? i / (lines.length - 1) : 0;
     const color = interpolateColor(BRAND_RGB.aeon, BRAND_RGB.electric, t);
     console.log(color + center(lines[i], width) + ANSI.reset);
   }

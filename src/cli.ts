@@ -18,11 +18,10 @@ import {
   groupHeader,
   commandExample,
   note,
+  VERSION,
 } from './ui/splash.js';
 import { initProject } from './commands/init.js';
 import { showInfo } from './commands/info.js';
-
-const VERSION = '0.2.0';
 
 // ────────────────────────────────────────────────────────────────
 // Argument Parsing (zero dependencies)
