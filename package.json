@@ -1,6 +1,6 @@
 {
   "name": "@affectively/aeon-foundation",
-  "version": "0.2.3",
+  "version": "5.0.0",
   "description": "The complete Aeon stack - distributed sync, collaborative pages, state management, relay transport, edge AI, neural graph database, and decentralized authentication in one package",
   "keywords": [
     "aeon",
@@ -23,7 +23,7 @@
     "offline-first",
     "foundation"
   ],
-  "author": "Edgework DAO",
+  "author": "Taylor William Buley (https://buley.fyi)",
   "license": "UNLICENSED",
   "homepage": "https://github.com/affectively-ai/aeon-foundation#readme",
   "repository": {
@@ -146,7 +146,7 @@
   },
   "dependencies": {
     "@affectively/aeon": "^1.2.0",
-    "@affectively/aeon-flux": "^1.4.0",
+    "@affectively/aeon-flux": "workspace:*",
     "@affectively/dash": "^5.3.1",
     "@affectively/relay": "^6.0.0",
     "@affectively/edgework-sdk": "^0.1.2",
