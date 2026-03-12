@@ -151,7 +151,7 @@
     "@affectively/relay": "^6.0.0",
     "@affectively/edgework-sdk": "^0.1.2",
     "@affectively/auth": "^0.1.0",
-    "@affectively/neural": "^5.0.0"
+    "@affectively/gnosis": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

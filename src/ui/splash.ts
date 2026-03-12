@@ -139,8 +139,8 @@ interface StackLayer {
 const STACK_LAYERS: StackLayer[] = [
   {
     name: 'Neural',
-    pkg: '@affectively/neural',
-    description: 'WebGPU-accelerated neural graph database',
+    pkg: '@affectively/gnosis',
+    description: 'Topological neural runtime built on Gnosis',
     color: BRAND.electric,
     icon: '◈',
   },

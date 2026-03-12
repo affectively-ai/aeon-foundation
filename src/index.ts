@@ -40,7 +40,7 @@ export * as Dash from '@affectively/dash';
 export * as Relay from '@affectively/relay';
 export * as Edgework from '@affectively/edgework-sdk';
 export * as Aegis from '@affectively/auth';
-export * as Neural from '@affectively/neural';
+export * as Neural from '@affectively/gnosis';
 
 // Legacy alias — Auth is Aegis
 export * as Auth from '@affectively/auth';
@@ -81,8 +81,8 @@ export const STACK = {
       description: 'UCAN-based decentralized authentication',
     },
     neural: {
-      name: '@affectively/neural',
-      description: 'WebGPU-accelerated neural graph database',
+      name: '@affectively/gnosis',
+      description: 'Topological neural runtime (transformers as hello-world)',
     },
   },
 } as const;
