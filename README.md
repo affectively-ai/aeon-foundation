@@ -47,7 +47,7 @@ Aeon Foundation is the way out.
 
 ```
   ╭────────────────────────────────────────────────────────╮
-  │ ◈  Neural                  @affectively/neural         │
+  │ ◈  Neural                  @affectively/gnosis         │
   │    WebGPU-accelerated neural graph database             │
   ├────────────────────────────────────────────────────────┤
   │ >  Edgework SDK            @affectively/edgework-sdk   │
