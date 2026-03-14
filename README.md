@@ -1,26 +1,27 @@
 # Aeon Foundation
 
-> Distributed. Collaborative. Alive.
+Aeon Foundation is the convenience package for people who want to start from the wider Aeon stack instead of pulling each piece in by hand.
 
-[![npm version](https://badge.fury.io/js/@affectively%2Faeon-foundation.svg)](https://www.npmjs.com/package/@affectively/aeon-foundation)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-blue.svg)](https://www.typescriptlang.org/)
+The fair brag is practical: one package and one CLI give you a single place to reach Aeon sync, Aeon Flux pages, Dash state, Relay transport, Auth, and the Gnosis export surface. If you already know you want the whole family, this saves setup work and keeps the imports consistent.
 
-Surface. Sync. Transport. Auth. Intelligence. Everything you need. Nothing you don't own.
+## What It Gives You
 
-**Aeon Foundation** is the complete stack for building distributed, collaborative, AI-powered applications. One import. One `npx`. The entire infrastructure — wired together and ready.
+- a top-level package that re-exports the main stack as namespaces,
+- subpath exports when you only want one piece,
+- a CLI for bootstrapping and exploring the stack,
+- and a cleaner starting point for teams that would otherwise assemble the same package set manually.
 
-```
-  ╭──────────────────────────────────────────────────────╮
-  │                                                      │
-  │    A E O N   F O U N D A T I O N                     │
-  │                                                      │
-  │    The complete stack. One import away.               │
-  │                                                      │
-  ╰──────────────────────────────────────────────────────╯
-```
+## The Main Namespaces
 
-## Escape in 30 seconds
+- `Aeon`: sync, versioning, compression, persistence, and transport
+- `Pages`: the Aeon Flux web surface
+- `Dash`: collaborative state
+- `Relay`: transport and discovery
+- `Aegis` and `Auth`: authentication exports
+- `Edgework`: edge inference surface
+- `Neural`: Gnosis export surface
+
+## Quick Start
 
 ```bash
 npx @affectively/aeon-foundation init my-app
@@ -28,274 +29,35 @@ cd my-app
 bun dev
 ```
 
-That's it. Distributed sync, collaborative state, relay transport, edge AI, neural graph, decentralized auth — configured and ready.
+## Import Everything
 
-## What if you owned your stack?
-
-Cloud vendor lock-in. Framework churn. Data scattered across services you don't control. Users tracked and monetized by platforms you depend on.
-
-Aeon Foundation is the way out.
-
-| Pillar       | What it means                                                    |
-| ------------ | ---------------------------------------------------------------- |
-| **Speed**    | 7ms edge renders. Sub-10ms sync. 0ms speculative navigation.    |
-| **Privacy**  | K-anonymity. Zero-knowledge proofs. Data never leaves the device.|
-| **Low Cost** | Edge compute. Pay per request. No origin servers.                |
-| **Ownership**| Open source. No vendor lock-in. Your code, your data. Forever.  |
-
-## The Stack
-
-```
-  ╭────────────────────────────────────────────────────────╮
-  │ ◈  Neural                  @affectively/gnosis         │
-  │    WebGPU-accelerated neural graph database             │
-  ├────────────────────────────────────────────────────────┤
-  │ >  Edgework SDK            @affectively/edgework-sdk   │
-  │    Client-side AI · WebGPU inference · On-device RLHF  │
-  ├────────────────────────────────────────────────────────┤
-  │ ~  Aeon Flux              @affectively/aeon-flux      │
-  │    Collaborative pages · CRDT flux state · Zero-CLS    │
-  ├────────────────────────────────────────────────────────┤
-  │ *  Dash                    @affectively/dash            │
-  │    Distributed CRDT state · WebRTC sync · Signals      │
-  ├────────────────────────────────────────────────────────┤
-  │ ⇄  Relay                   @affectively/relay          │
-  │    Transport relay · Discovery · Privacy · Adaptive    │
-  ├────────────────────────────────────────────────────────┤
-  │ @  Aeon                    @affectively/aeon            │
-  │    Distributed sync · Schema versioning · Conflict res │
-  ├────────────────────────────────────────────────────────┤
-  │ #  Aegis                   @affectively/auth            │
-  │    UCAN-based · Decentralized · Zero-trust             │
-  ╰────────────────────────────────────────────────────────╯
+```ts
+import {
+  Aeon,
+  Pages,
+  Dash,
+  Relay,
+  Edgework,
+  Aegis,
+  Neural,
+} from '@affectively/aeon-foundation';
 ```
 
-## Usage
+## Or Import Just One Slice
 
-### Import everything
-
-```typescript
-import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';
-```
-
-Seven namespaces. The entire distributed stack.
-
-```typescript
-// Distributed sync — coordinate nodes across the network
-const coordinator = new Aeon.SyncCoordinator();
-coordinator.registerNode({
-  id: 'node-1',
-  address: 'localhost',
-  port: 3000,
-  status: 'online',
-  lastHeartbeat: new Date().toISOString(),
-  version: '1.0.0',
-  capabilities: ['sync', 'replicate'],
-});
-
-// Edge AI — inference runs on the user's device, not yours
-const ai = await Edgework.Edgework.init({
-  model: 'cyrano-360m',
-  onProgress: (p) => console.log(`${p.percent}% downloaded`),
-});
-const response = await ai.generate('How are you feeling today?');
-```
-
-### Import individual modules
-
-Take only what you need. Tree-shaking friendly.
-
-```typescript
-import { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon-foundation/aeon';
-import { Edgework } from '@affectively/aeon-foundation/edgework';
-import { AeonPageProvider } from '@affectively/aeon-foundation/pages';
-import { createStore } from '@affectively/aeon-foundation/dash';
-import { createUcanAuth } from '@affectively/aeon-foundation/aegis';
-import { NeuralGraph } from '@affectively/aeon-foundation/neural';
-```
-
-## Modules
-
-### Aeon — The Sync Standard
-
-Distributed synchronization, schema versioning, and conflict resolution. The collaborative primitives the web deserves.
-
-```typescript
-import { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon-foundation/aeon';
-```
-
-Submodules: `core` `offline` `compression` `optimization` `presence` `versioning` `distributed` `utils` `crypto` `persistence`
-
-### Aeon Flux — Pages that Think
-
-CRDT-based flux state, Edge Side Inference, zero-CLS rendering. Collaborative pages with built-in intelligence.
-
-```typescript
-import { AeonPageProvider, useAeonPage } from '@affectively/aeon-foundation/pages';
-```
-
-Submodules: `runtime` `react` `esi` `server` `directives`
-
-### Dash — Living State
-
-Distributed state management built on Yjs CRDTs with WebRTC sync. Real-time collaboration that works offline.
-
-```typescript
-import { createStore } from '@affectively/aeon-foundation/dash';
-```
-
-Submodules: `sync` `provider` `connection` `webtransport`
-
-### Relay — The Transport Layer
-
-Relay discovery, adaptive transport selection, and privacy-preserving sync. WebSocket and WebTransport with automatic failover.
-
-```typescript
-import { Relay } from '@affectively/aeon-foundation/relay';
-```
-
-Submodules: `discovery` `transport` `privacy`
-
-### Edgework SDK — Intelligence at the Edge
-
-Client-side AI inference with WebGPU. On-device RLHF. Model sync. Zero server dependency. The model runs where the user is.
-
-```typescript
-import { Edgework } from '@affectively/aeon-foundation/edgework';
-
-const ai = await Edgework.init({ model: 'cyrano-360m' });
-
-// Generate
-const response = await ai.generate('Hello from the edge!');
-
-// Stream
-for await (const token of ai.stream('Tell me a story')) {
-  process.stdout.write(token);
-}
-
-// Chat with context
-const reply = await ai.chat([
-  { role: 'user', content: 'I had a rough day' },
-]);
-
-// Feedback for on-device RLHF
-await ai.feedback(messageHash, 'positive');
-```
-
-Submodules: `storage` `inference` `sync` `rlhf` `react` `data` `compute` `compute/distributed` `auth` `gateway` `agent`
-
-### Aegis — No Authority
-
-UCAN-based decentralized authentication. No central server decides who you are.
-
-```typescript
-import { createUcanAuth } from '@affectively/aeon-foundation/aegis';
-```
-
-### Neural — The Graph
-
-A transparent, local-first, WebGPU-accelerated neural graph database. Knowledge graphs that think at the speed of the GPU.
-
-```typescript
-import { NeuralGraph } from '@affectively/aeon-foundation/neural';
-```
-
-Submodules: `engine` `gpu`
-
-## CLI
-
-A luxury CLI experience for the Aeon stack. Gradient rendering, animated splash, branded TUI.
-
-```bash
-# The gateway — interactive stack explorer
-npx @affectively/aeon-foundation
-
-# Scaffold a new project
-npx @affectively/aeon-foundation init my-app
-
-# Show the stack diagram and all available imports
-npx @affectively/aeon-foundation info
-
-# Help
-npx @affectively/aeon-foundation --help
-```
-
-### Templates
-
-| Template   | What you get                                        |
-| ---------- | --------------------------------------------------- |
-| `minimal`  | SyncCoordinator + TypeScript. Start from zero.      |
-| `full`     | All seven packages + React. Everything configured.  |
-| `edge-ai`  | Edgework SDK focused. AI at the edge.               |
-
-```bash
-npx @affectively/aeon-foundation init my-app --template full
-```
-
-### Package Manager Detection
-
-Auto-detects bun, pnpm, yarn, or npm. Override with `--pm`:
-
-```bash
-npx @affectively/aeon-foundation init my-app --pm bun
-```
-
-## Three Paths
-
-### 1. New project
-
-Start fresh with everything configured.
-
-```bash
-npx @affectively/aeon-foundation init my-app --template full
-```
-
-### 2. Add to existing project
-
-Keep your code, add the infrastructure.
-
-```bash
-bun add @affectively/aeon-foundation
-```
-
-### 3. Just the sync
-
-Add Aeon to any project for distributed state.
-
-```bash
-bun add @affectively/aeon-foundation
-```
-
-```typescript
+```ts
 import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';
+import { createStore } from '@affectively/aeon-foundation/dash';
+import { Edgework } from '@affectively/aeon-foundation/edgework';
 ```
 
-## Philosophy
+## Why People May Like It
 
-In Gnosticism, **Aeons** are divine emanations from the Pleroma — bridges between the pure source and the material world, existing in pairs to maintain balance.
+- it reduces the "which package was that in?" problem,
+- it gives the stack a single entry point for new projects,
+- it keeps top-level and subpath imports available,
+- and it includes a CLI instead of asking people to memorize package relationships first.
 
-In your application, Aeon Foundation is that bridge: the complete set of primitives for building collaborative, intelligent applications at the edge. User-first. Future-forward. No authority.
+## Why This README Is Grounded
 
-> Universal intelligence should be available universally.
-
-## Requirements
-
-- **Node.js** >= 18.0.0
-- **TypeScript** >= 5.7 (recommended)
-- **React** >= 18.0.0 (optional — for Pages, Dash, and Edgework React bindings)
-
-## Links
-
-- [GitHub](https://github.com/affectively-ai/aeon-foundation)
-- [npm](https://www.npmjs.com/package/@affectively/aeon-foundation)
-- [Aeon](https://github.com/affectively-ai/aeon) — Distributed sync
-- [Aeon Flux](https://github.com/affectively-ai/aeon-flux) — Collaborative pages
-- [Dash](https://github.com/affectively-ai/dash) — CRDT state
-- [Relay](https://github.com/affectively-ai/relay) — Transport relay
-- [Edgework SDK](https://github.com/affectively-ai/edgework-sdk) — Edge AI
-- [Neural](https://github.com/affectively-ai/neural) — Neural graph database
-- [Affectively](https://affectively.ai)
-
-## License
-
-MIT
+Aeon Foundation is not magic. The strongest fair brag is that it is a useful aggregator and starter surface for the broader Aeon stack.
