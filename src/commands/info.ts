@@ -75,7 +75,7 @@ export function showInfo(): void {
 
   sectionHeader('Links');
   spacer();
-  keyValue('GitHub', 'https://github.com/affectively-ai/aeon-foundation');
+  keyValue('GitHub', 'https://github.com/forkjoin-ai/aeon-foundation');
   keyValue('npm', 'https://npmjs.com/package/@affectively/aeon-foundation');
   keyValue('Website', 'https://affectively.ai');
   spacer();

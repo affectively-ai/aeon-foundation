@@ -118,7 +118,7 @@ function showHelp(): void {
 
   groupHeader('Links');
   console.log(
-    `  ${dim('GitHub')}   https://github.com/affectively-ai/aeon-foundation`
+    `  ${dim('GitHub')}   https://github.com/forkjoin-ai/aeon-foundation`
   );
   console.log(
     `  ${dim(
@@ -171,7 +171,7 @@ async function defaultAction(): Promise<void> {
   );
   spacer();
 
-  note('https://github.com/affectively-ai/aeon-foundation');
+  note('https://github.com/forkjoin-ai/aeon-foundation');
   spacer();
 }
 

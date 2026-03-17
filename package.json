@@ -25,13 +25,13 @@
   ],
   "author": "Taylor William Buley (https://buley.fyi)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/affectively-ai/aeon-foundation#readme",
+  "homepage": "https://github.com/forkjoin-ai/aeon-foundation#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/affectively-ai/aeon-foundation.git"
+    "url": "git+https://github.com/forkjoin-ai/aeon-foundation.git"
   },
   "bugs": {
-    "url": "https://github.com/affectively-ai/aeon-foundation/issues"
+    "url": "https://github.com/forkjoin-ai/aeon-foundation/issues"
   },
   "type": "module",
   "main": "./dist/index.cjs",

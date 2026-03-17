@@ -313,6 +313,6 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
   );
   spacer();
 
-  note('Docs: https://github.com/affectively-ai/aeon-foundation');
+  note('Docs: https://github.com/forkjoin-ai/aeon-foundation');
   spacer();
 }
