@@ -145,7 +145,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@a0n/aeon": "^1.2.0",
+    "@a0n/aeon": "workspace:*",
     "@a0n/aeon-flux": "workspace:*",
     "@affectively/dash": "^5.3.1",
     "@affectively/relay": "^6.0.0",
