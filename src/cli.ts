@@ -4,10 +4,10 @@
  * The complete Aeon stack. One command away.
  *
  * Usage:
- *   npx @affectively/aeon-foundation          Interactive setup
- *   npx @affectively/aeon-foundation init     Scaffold a new project
- *   npx @affectively/aeon-foundation info     Show stack info
- *   npx @affectively/aeon-foundation --help   Help
+ *   npx @a0n/aeon-foundation          Interactive setup
+ *   npx @a0n/aeon-foundation init     Scaffold a new project
+ *   npx @a0n/aeon-foundation info     Show stack info
+ *   npx @a0n/aeon-foundation --help   Help
  */
 
 import { BRAND, ANSI, bold, dim, colorize } from './ui/colors.js';
@@ -76,9 +76,9 @@ function showHelp(): void {
   );
 
   groupHeader('Quick Start');
-  commandExample('npx @affectively/aeon-foundation', 'Interactive setup');
+  commandExample('npx @a0n/aeon-foundation', 'Interactive setup');
   commandExample(
-    'npx @affectively/aeon-foundation init my-app',
+    'npx @a0n/aeon-foundation init my-app',
     'Scaffold a project'
   );
 
@@ -97,7 +97,7 @@ function showHelp(): void {
   groupHeader('Imports');
   console.log(
     `  ${colorize(
-      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation'",
+      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@a0n/aeon-foundation'",
       BRAND.electric
     )}`
   );
@@ -105,13 +105,13 @@ function showHelp(): void {
   console.log(`  ${dim('Or individual modules:')}`);
   console.log(
     `  ${colorize(
-      "import { SyncCoordinator } from '@affectively/aeon-foundation/aeon'",
+      "import { SyncCoordinator } from '@a0n/aeon-foundation/aeon'",
       BRAND.electric
     )}`
   );
   console.log(
     `  ${colorize(
-      "import { Edgework } from '@affectively/aeon-foundation/edgework'",
+      "import { Edgework } from '@a0n/aeon-foundation/edgework'",
       BRAND.electric
     )}`
   );
@@ -123,7 +123,7 @@ function showHelp(): void {
   console.log(
     `  ${dim(
       'npm'
-    )}      https://npmjs.com/package/@affectively/aeon-foundation`
+    )}      https://npmjs.com/package/@a0n/aeon-foundation`
   );
   console.log(`  ${dim('Website')}  https://affectively.ai`);
 
@@ -141,22 +141,22 @@ async function defaultAction(): Promise<void> {
   console.log(`  ${bold('Get started:')}`);
   spacer();
   commandExample(
-    'npx @affectively/aeon-foundation init my-app',
+    'npx @a0n/aeon-foundation init my-app',
     'Scaffold a new project'
   );
-  commandExample('npx @affectively/aeon-foundation info', 'Explore the stack');
+  commandExample('npx @a0n/aeon-foundation info', 'Explore the stack');
   spacer();
 
   console.log(`  ${dim('Or just install it:')}`);
   console.log(
     `  ${dim('$')} ${colorize(
-      'npm install @affectively/aeon-foundation',
+      'npm install @a0n/aeon-foundation',
       BRAND.aeon
     )}`
   );
   console.log(
     `  ${dim('$')} ${colorize(
-      'bun add @affectively/aeon-foundation',
+      'bun add @a0n/aeon-foundation',
       BRAND.aeon
     )}`
   );
@@ -165,7 +165,7 @@ async function defaultAction(): Promise<void> {
   console.log(`  ${dim('Then import everything:')}`);
   console.log(
     `  ${colorize(
-      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';",
+      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@a0n/aeon-foundation';",
       BRAND.electric
     )}`
   );

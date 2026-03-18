@@ -1,5 +1,5 @@
 /**
- * @affectively/aeon-foundation
+ * @a0n/aeon-foundation
  *
  * The complete Aeon stack in one import.
  *
@@ -10,7 +10,7 @@
  * @example
  * ```typescript
  * // Import the entire stack
- * import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';
+ * import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@a0n/aeon-foundation';
  *
  * // Use distributed sync
  * const coordinator = new Aeon.SyncCoordinator();
@@ -25,28 +25,28 @@
  * @example
  * ```typescript
  * // Or import individual modules
- * import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';
- * import { Edgework } from '@affectively/aeon-foundation/edgework';
- * import { createStore } from '@affectively/aeon-foundation/dash';
+ * import { SyncCoordinator } from '@a0n/aeon-foundation/aeon';
+ * import { Edgework } from '@a0n/aeon-foundation/edgework';
+ * import { createStore } from '@a0n/aeon-foundation/dash';
  * ```
  *
  * @packageDocumentation
  */
 
 // Re-export all stack packages as namespaces
-export * as Aeon from '@affectively/aeon';
-export * as Pages from '@affectively/aeon-flux';
+export * as Aeon from '@a0n/aeon';
+export * as Pages from '@a0n/aeon-flux';
 export * as Dash from '@affectively/dash';
 export * as Relay from '@affectively/relay';
 export * as Edgework from '@affectively/edgework-sdk';
 export * as Aegis from '@affectively/auth';
-export * as Neural from '@affectively/gnosis';
+export * as Neural from '@a0n/gnosis';
 
 // Legacy alias — Auth is Aegis
 export * as Auth from '@affectively/auth';
 
 // Also export the most common types/classes at the top level for convenience
-export { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon';
+export { SyncCoordinator, SchemaVersionManager } from '@a0n/aeon';
 export { Edgework as EdgeworkSDK } from '@affectively/edgework-sdk';
 
 /**
@@ -57,11 +57,11 @@ export const STACK = {
   version: '0.2.3',
   packages: {
     aeon: {
-      name: '@affectively/aeon',
+      name: '@a0n/aeon',
       description: 'Distributed sync & schema versioning',
     },
     pages: {
-      name: '@affectively/aeon-flux',
+      name: '@a0n/aeon-flux',
       description: 'Collaborative pages with CRDT flux state',
     },
     dash: {
@@ -81,7 +81,7 @@ export const STACK = {
       description: 'UCAN-based decentralized authentication',
     },
     neural: {
-      name: '@affectively/gnosis',
+      name: '@a0n/gnosis',
       description: 'Topological neural runtime (transformers as hello-world)',
     },
   },

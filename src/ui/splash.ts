@@ -139,7 +139,7 @@ interface StackLayer {
 const STACK_LAYERS: StackLayer[] = [
   {
     name: 'Neural',
-    pkg: '@affectively/gnosis',
+    pkg: '@a0n/gnosis',
     description: 'Topological neural runtime built on Gnosis',
     color: BRAND.electric,
     icon: '◈',
@@ -153,7 +153,7 @@ const STACK_LAYERS: StackLayer[] = [
   },
   {
     name: 'Aeon Flux',
-    pkg: '@affectively/aeon-flux',
+    pkg: '@a0n/aeon-flux',
     description: 'Collaborative pages with CRDT flux state, ESI, zero-CLS',
     color: BRAND.aeonBright,
     icon: '~',
@@ -174,7 +174,7 @@ const STACK_LAYERS: StackLayer[] = [
   },
   {
     name: 'Aeon',
-    pkg: '@affectively/aeon',
+    pkg: '@a0n/aeon',
     description: 'Distributed sync, schema versioning, conflict resolution',
     color: BRAND.aeon,
     icon: '@',

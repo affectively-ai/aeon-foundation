@@ -49,7 +49,7 @@ function generatePackageJson(name: string, template: string): string {
       start: 'bun run dist/index.js',
     },
     dependencies: {
-      '@affectively/aeon-foundation': '^0.1.0',
+      '@a0n/aeon-foundation': '^0.1.0',
     },
     devDependencies: {
       typescript: '^5.7.0',
@@ -101,7 +101,7 @@ function generateMinimalEntry(): string {
  * Built with the complete Aeon stack.
  */
 
-import { Aeon, Edgework, STACK } from '@affectively/aeon-foundation';
+import { Aeon, Edgework, STACK } from '@a0n/aeon-foundation';
 
 console.log('Aeon Foundation Stack:', STACK.name, 'v' + STACK.version);
 console.log('Packages:', Object.keys(STACK.packages).join(', '));
@@ -130,7 +130,7 @@ import {
   Aegis,
   Neural,
   STACK,
-} from '@affectively/aeon-foundation';
+} from '@a0n/aeon-foundation';
 
 console.log('Aeon Foundation Stack:', STACK.name, 'v' + STACK.version);
 console.log('');
@@ -160,7 +160,7 @@ function generateEdgeAiEntry(): string {
  * Client-side AI inference with on-device RLHF.
  */
 
-import { Edgework } from '@affectively/aeon-foundation';
+import { Edgework } from '@a0n/aeon-foundation';
 
 const { Edgework: SDK } = Edgework;
 
@@ -286,7 +286,7 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
   console.log(`  ${dim('Import the full stack:')}`);
   console.log(
     `  ${colorize(
-      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@affectively/aeon-foundation';",
+      "import { Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural } from '@a0n/aeon-foundation';",
       BRAND.electric
     )}`
   );
@@ -295,19 +295,19 @@ export async function initProject(options: InitOptions = {}): Promise<void> {
   console.log(`  ${dim('Or import individual modules:')}`);
   console.log(
     `  ${colorize(
-      "import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';",
+      "import { SyncCoordinator } from '@a0n/aeon-foundation/aeon';",
       BRAND.electric
     )}`
   );
   console.log(
     `  ${colorize(
-      "import { Edgework } from '@affectively/aeon-foundation/edgework';",
+      "import { Edgework } from '@a0n/aeon-foundation/edgework';",
       BRAND.electric
     )}`
   );
   console.log(
     `  ${colorize(
-      "import { NeuralGraph } from '@affectively/aeon-foundation/neural';",
+      "import { NeuralGraph } from '@a0n/aeon-foundation/neural';",
       BRAND.electric
     )}`
   );

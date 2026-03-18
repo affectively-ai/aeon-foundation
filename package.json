@@ -1,5 +1,5 @@
 {
-  "name": "@affectively/aeon-foundation",
+  "name": "@a0n/aeon-foundation",
   "version": "5.0.0",
   "description": "The complete Aeon stack - distributed sync, collaborative pages, state management, relay transport, edge AI, neural graph database, and decentralized authentication in one package",
   "keywords": [
@@ -145,13 +145,13 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@affectively/aeon": "^1.2.0",
-    "@affectively/aeon-flux": "workspace:*",
+    "@a0n/aeon": "^1.2.0",
+    "@a0n/aeon-flux": "workspace:*",
     "@affectively/dash": "^5.3.1",
     "@affectively/relay": "^6.0.0",
     "@affectively/edgework-sdk": "^0.1.2",
     "@affectively/auth": "^0.1.0",
-    "@affectively/gnosis": "workspace:*"
+    "@a0n/gnosis": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

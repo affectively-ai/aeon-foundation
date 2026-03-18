@@ -24,7 +24,7 @@ The fair brag is practical: one package and one CLI give you a single place to r
 ## Quick Start
 
 ```bash
-npx @affectively/aeon-foundation init my-app
+npx @a0n/aeon-foundation init my-app
 cd my-app
 bun dev
 ```
@@ -40,15 +40,15 @@ import {
   Edgework,
   Aegis,
   Neural,
-} from '@affectively/aeon-foundation';
+} from '@a0n/aeon-foundation';
 ```
 
 ## Or Import Just One Slice
 
 ```ts
-import { SyncCoordinator } from '@affectively/aeon-foundation/aeon';
-import { createStore } from '@affectively/aeon-foundation/dash';
-import { Edgework } from '@affectively/aeon-foundation/edgework';
+import { SyncCoordinator } from '@a0n/aeon-foundation/aeon';
+import { createStore } from '@a0n/aeon-foundation/dash';
+import { Edgework } from '@a0n/aeon-foundation/edgework';
 ```
 
 ## Why People May Like It

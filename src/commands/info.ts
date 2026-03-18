@@ -17,13 +17,13 @@ export function showInfo(): void {
   spacer();
   console.log(
     `  ${dim('Install:')}  ${colorize(
-      'npm install @affectively/aeon-foundation',
+      'npm install @a0n/aeon-foundation',
       BRAND.aeon
     )}`
   );
   console.log(
     `  ${dim('   or  ')}  ${colorize(
-      'bun add @affectively/aeon-foundation',
+      'bun add @a0n/aeon-foundation',
       BRAND.aeon
     )}`
   );
@@ -34,35 +34,35 @@ export function showInfo(): void {
 
   const imports = [
     {
-      path: '@affectively/aeon-foundation',
+      path: '@a0n/aeon-foundation',
       desc: 'Everything (Aeon, Pages, Dash, Relay, Edgework, Aegis, Neural)',
     },
     {
-      path: '@affectively/aeon-foundation/aeon',
+      path: '@a0n/aeon-foundation/aeon',
       desc: 'Distributed sync & versioning',
     },
     {
-      path: '@affectively/aeon-foundation/pages',
+      path: '@a0n/aeon-foundation/pages',
       desc: 'Collaborative pages + CRDT flux',
     },
     {
-      path: '@affectively/aeon-foundation/dash',
+      path: '@a0n/aeon-foundation/dash',
       desc: 'CRDT state + WebRTC sync',
     },
     {
-      path: '@affectively/aeon-foundation/relay',
+      path: '@a0n/aeon-foundation/relay',
       desc: 'Transport relay with discovery',
     },
     {
-      path: '@affectively/aeon-foundation/edgework',
+      path: '@a0n/aeon-foundation/edgework',
       desc: 'Edge AI + WebGPU inference',
     },
     {
-      path: '@affectively/aeon-foundation/aegis',
+      path: '@a0n/aeon-foundation/aegis',
       desc: 'UCAN-based decentralized auth',
     },
     {
-      path: '@affectively/aeon-foundation/neural',
+      path: '@a0n/aeon-foundation/neural',
       desc: 'WebGPU neural graph database',
     },
   ];
@@ -76,7 +76,7 @@ export function showInfo(): void {
   sectionHeader('Links');
   spacer();
   keyValue('GitHub', 'https://github.com/forkjoin-ai/aeon-foundation');
-  keyValue('npm', 'https://npmjs.com/package/@affectively/aeon-foundation');
+  keyValue('npm', 'https://npmjs.com/package/@a0n/aeon-foundation');
   keyValue('Website', 'https://affectively.ai');
   spacer();
 }

@@ -1,11 +1,11 @@
 /**
- * @affectively/aeon-foundation/aeon
+ * @a0n/aeon-foundation/aeon
  *
  * Distributed synchronization, schema versioning, and conflict resolution.
  *
  * @example
  * ```typescript
- * import { SyncCoordinator, SchemaVersionManager } from '@affectively/aeon-foundation/aeon';
+ * import { SyncCoordinator, SchemaVersionManager } from '@a0n/aeon-foundation/aeon';
  *
  * const coordinator = new SyncCoordinator();
  * coordinator.registerNode({
@@ -19,4 +19,4 @@
  * });
  * ```
  */
-export * from '@affectively/aeon';
+export * from '@a0n/aeon';

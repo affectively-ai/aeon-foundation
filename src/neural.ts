@@ -1,1 +1,1 @@
-export * from '@affectively/gnosis';
+export * from '@a0n/gnosis';

@@ -1,11 +1,11 @@
 /**
- * @affectively/aeon-foundation/auth
+ * @a0n/aeon-foundation/auth
  *
  * UCAN-based decentralized authentication.
  *
  * @example
  * ```typescript
- * import { createUcanAuth } from '@affectively/aeon-foundation/auth';
+ * import { createUcanAuth } from '@a0n/aeon-foundation/auth';
  * ```
  */
 export * from '@affectively/auth';
