@@ -77,10 +77,7 @@ function showHelp(): void {
 
   groupHeader('Quick Start');
   commandExample('npx @a0n/aeon-foundation', 'Interactive setup');
-  commandExample(
-    'npx @a0n/aeon-foundation init my-app',
-    'Scaffold a project'
-  );
+  commandExample('npx @a0n/aeon-foundation init my-app', 'Scaffold a project');
 
   groupHeader('Commands');
   commandExample('init [name]', 'Create a new Aeon Foundation project');
@@ -121,9 +118,7 @@ function showHelp(): void {
     `  ${dim('GitHub')}   https://github.com/forkjoin-ai/aeon-foundation`
   );
   console.log(
-    `  ${dim(
-      'npm'
-    )}      https://npmjs.com/package/@a0n/aeon-foundation`
+    `  ${dim('npm')}      https://npmjs.com/package/@a0n/aeon-foundation`
   );
   console.log(`  ${dim('Website')}  https://affectively.ai`);
 
@@ -149,16 +144,10 @@ async function defaultAction(): Promise<void> {
 
   console.log(`  ${dim('Or just install it:')}`);
   console.log(
-    `  ${dim('$')} ${colorize(
-      'npm install @a0n/aeon-foundation',
-      BRAND.aeon
-    )}`
+    `  ${dim('$')} ${colorize('npm install @a0n/aeon-foundation', BRAND.aeon)}`
   );
   console.log(
-    `  ${dim('$')} ${colorize(
-      'bun add @a0n/aeon-foundation',
-      BRAND.aeon
-    )}`
+    `  ${dim('$')} ${colorize('bun add @a0n/aeon-foundation', BRAND.aeon)}`
   );
   spacer();
 
