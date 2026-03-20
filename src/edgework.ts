@@ -16,4 +16,4 @@
  * const response = await ai.generate('How are you feeling today?');
  * ```
  */
-export * from '@affectively/edgework-sdk';
+export * from '@a0n/edgework-sdk';

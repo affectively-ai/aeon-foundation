@@ -147,9 +147,9 @@
   "dependencies": {
     "@a0n/aeon": "workspace:*",
     "@a0n/aeon-flux": "workspace:*",
-    "@affectively/dash": "^5.3.1",
+    "@a0n/dash": "^5.3.1",
     "@affectively/relay": "^6.0.0",
-    "@affectively/edgework-sdk": "^0.1.2",
+    "@a0n/edgework-sdk": "^0.1.2",
     "@affectively/auth": "^0.1.0",
     "@a0n/gnosis": "workspace:*"
   },

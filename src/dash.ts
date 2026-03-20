@@ -8,4 +8,4 @@
  * import { createStore } from '@a0n/aeon-foundation/dash';
  * ```
  */
-export * from '@affectively/dash';
+export * from '@a0n/dash';

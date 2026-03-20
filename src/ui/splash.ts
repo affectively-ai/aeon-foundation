@@ -146,7 +146,7 @@ const STACK_LAYERS: StackLayer[] = [
   },
   {
     name: 'Edgework SDK',
-    pkg: '@affectively/edgework-sdk',
+    pkg: '@a0n/edgework-sdk',
     description: 'Client-side AI inference, WebGPU, on-device RLHF',
     color: BRAND.electric,
     icon: '>',
@@ -160,7 +160,7 @@ const STACK_LAYERS: StackLayer[] = [
   },
   {
     name: 'Dash',
-    pkg: '@affectively/dash',
+    pkg: '@a0n/dash',
     description: 'Distributed CRDT state management with WebRTC sync',
     color: BRAND.emerald,
     icon: '*',

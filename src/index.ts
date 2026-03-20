@@ -36,9 +36,9 @@
 // Re-export all stack packages as namespaces
 export * as Aeon from '@a0n/aeon';
 export * as Pages from '@a0n/aeon-flux';
-export * as Dash from '@affectively/dash';
+export * as Dash from '@a0n/dash';
 export * as Relay from '@affectively/relay';
-export * as Edgework from '@affectively/edgework-sdk';
+export * as Edgework from '@a0n/edgework-sdk';
 export * as Aegis from '@affectively/auth';
 export * as Neural from '@a0n/gnosis';
 
@@ -47,7 +47,7 @@ export * as Auth from '@affectively/auth';
 
 // Also export the most common types/classes at the top level for convenience
 export { SyncCoordinator, SchemaVersionManager } from '@a0n/aeon';
-export { Edgework as EdgeworkSDK } from '@affectively/edgework-sdk';
+export { Edgework as EdgeworkSDK } from '@a0n/edgework-sdk';
 
 /**
  * Stack version manifest
@@ -65,7 +65,7 @@ export const STACK = {
       description: 'Collaborative pages with CRDT flux state',
     },
     dash: {
-      name: '@affectively/dash',
+      name: '@a0n/dash',
       description: 'CRDT-based state management with WebRTC',
     },
     relay: {
@@ -73,7 +73,7 @@ export const STACK = {
       description: 'Transport relay layer with discovery & privacy',
     },
     edgework: {
-      name: '@affectively/edgework-sdk',
+      name: '@a0n/edgework-sdk',
       description: 'Client-side AI inference & on-device RLHF',
     },
     aegis: {
