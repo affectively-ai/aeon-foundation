@@ -147,10 +147,10 @@
   "dependencies": {
     "@a0n/aeon": "workspace:*",
     "@a0n/aeon-flux": "workspace:*",
-    "@a0n/dash": "^5.3.1",
+    "@a0n/dash": "workspace:*",
     "@affectively/relay": "^6.0.0",
-    "@a0n/edgework-sdk": "^0.1.2",
-    "@affectively/auth": "^0.1.0",
+    "@a0n/edgework-sdk": "workspace:*",
+    "@affectively/auth": "workspace:*",
     "@a0n/gnosis": "workspace:*"
   },
   "devDependencies": {
